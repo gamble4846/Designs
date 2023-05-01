@@ -1,0 +1,252 @@
+body {
+    margin: 0px;
+    font-family: 'Rubik';
+    background-color: #2e2e2e;
+}
+
+.BodyContainer {
+    padding: 10px;
+    color: white;
+}
+
+.TypeContainer {
+    padding-bottom: 8px;
+}
+
+.TypeHeaderContainer {
+    padding-top: 8px;
+    padding-bottom: 16px;
+    font-size: 20px;
+}
+
+.FolderContainer,
+.FileContainer {
+    padding: 10px;
+    width: calc(10% - 20px);
+    border-radius: 10px;
+    flex-wrap: wrap;
+    cursor: default;
+    position: relative;
+}
+
+.MenuButtonContainer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    padding: 5px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.MenuButtonContainer:hover,
+.ListMenuButtonContainer:hover {
+    background-color: #4d4d4d;
+}
+
+.FolderContainer:hover,
+.FileContainer:hover {
+    background-color: #3e3e3e;
+}
+
+.FolderContainer:hover .MenuButtonContainer,
+.FileContainer:hover .MenuButtonContainer {
+    display: flex;
+}
+
+.SvgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FolderContainer h1 {
+    font-weight: 100;
+    font-size: 17px;
+    margin: 0px;
+    text-align: center;
+}
+
+.FileImageContainer {
+    padding: 5px 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FileImageContainer img {
+    width: 100%;
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.TypeContentContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.FileContainer .FileHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FileContainer .FileTypeContainer {
+    display: flex;
+    align-items: center;
+}
+
+.FileTitle {
+    padding: 0px 5px;
+    cursor: default;
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.MenuContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.CurrentHeaderContainer h1 {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.CurrentHeaderContainer {
+    flex-grow: 2;
+}
+
+
+.MenuContainer .buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: max-content;
+}
+
+.MenuContainer .buttonsContainer .gridButtonContainer,
+.MenuContainer .buttonsContainer .listButtonContainer,
+.MenuContainer .buttonsContainer .infoButtonContainer {
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MenuContainer .buttonsContainer .gridButtonContainer:hover,
+.MenuContainer .buttonsContainer .listButtonContainer:hover,
+.MenuContainer .buttonsContainer .infoButtonContainer:hover {
+    background-color: #3e3e3e;
+}
+
+.ListLayoutTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ListLayoutTable th,
+.ListLayoutTable td {
+    text-align: left;
+    border-bottom: 1px solid #cbcbcb;
+    padding: 10px 5px;
+}
+
+.ListLayoutTable tr:hover {
+    background-color: #3e3e3e;
+}
+
+.ListLayoutTable th {
+    background-color: #3c3c3c;
+}
+
+.listItemTitleContainer {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.listItemTitleContainer .ListItemTitle {
+    padding: 0px 10px;
+}
+
+.ListMenuButtonContainer {
+    display: flex;
+    padding: 5px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: max-content;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #3e3e3e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url(/Rubik.ttf);
+}
+
+@media only screen and (max-width: 1500px) {
+
+    .FolderContainer,
+    .FileContainer {
+        width: calc(15% - 20px);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .FolderContainer,
+    .FileContainer {
+        width: calc(20% - 20px);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .FolderContainer,
+    .FileContainer {
+        width: calc(25% - 20px);
+    }
+
+    .ListLayoutTable tr td:nth-child(2),
+    .ListLayoutTable tr th:nth-child(2) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .FolderContainer,
+    .FileContainer {
+        width: calc(50% - 20px);
+    }
+}

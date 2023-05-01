@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Explorer</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+</head>
+
+<body>
+    <div class="BodyContainer">
+        <div class="MenuContainer">
+            <div class="CurrentHeaderContainer"><h1>My Drive</h1></div>
+            <div class="buttonsContainer">
+                <div class="gridButtonContainer" onclick="GridButtonClicked()" id="gridButton"><svg fill="#bdbdbd" width="24px" height="24px" viewBox="0 0 24 24"><path d="M2,5v14h20V5H2z M14,7v4h-4V7H14z M4,7h4v4H4V7z M16,11V7h4v4H16z M4,17v-4h4v4H4z M10,17v-4h4v4H10z M20,17 h-4v-4h4V17z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></div>
+                <div class="listButtonContainer" onclick="ListButtonOnClick()" id="listButton"><svg fill="#bdbdbd" width="24px" height="24px" viewBox="0 0 24 24" focusable="false"><path d="M3,5v14h18V5H3z M7,7v2H5V7H7z M5,13v-2h2v2H5z M5,15h2v2H5V15z M19,17H9v-2h10V17z M19,13H9v-2h10V13z M19,9H9V7h10V9z"></path></svg></div>
+                <div class="infoButtonContainer"><svg fill="#bdbdbd" width="24px" height="24px" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"></path></svg></div>
+            </div>
+        </div>
+        <section class="GridLayoutContainer" id="GridLayoutContainer">
+            <div class="TypeContainer">
+                <div class="TypeHeaderContainer">
+                    Folders
+                </div>
+                <div class="TypeContentContainer">
+                    <div class="FolderContainer">
+                        <div class="SvgContainer">
+                            <svg style="max-width: 100px" width="100%" focusable="false" viewBox="0 0 24 24" fill="#5f6368" class="a-s-fa-Ha-pa"><g><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg>
+                        </div>
+                        <h1>Program Files (x86)</h1>
+                        <div class="MenuButtonContainer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" x="0px" y="0px" width="20" viewBox="0 0 32 32"> <path d="M13 16c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 14.346 13 16zM13 26c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 24.346 13 26zM13 6c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 4.346 13 6z"></path> </svg>
+                        </div>
+                    </div>
+                    <div class="FolderContainer">
+                        <div class="SvgContainer">
+                            <svg style="max-width: 100px" width="100%" focusable="false" viewBox="0 0 24 24" fill="#5f6368" class="a-s-fa-Ha-pa"><g><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg>
+                        </div>
+                        <h1>Users</h1>
+                        <div class="MenuButtonContainer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" x="0px" y="0px" width="20" viewBox="0 0 32 32"> <path d="M13 16c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 14.346 13 16zM13 26c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 24.346 13 26zM13 6c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 4.346 13 6z"></path> </svg>
+                        </div>
+                    </div>
+                    <div class="FolderContainer">
+                        <div class="SvgContainer">
+                            <svg style="max-width: 100px" width="100%" focusable="false" viewBox="0 0 24 24" fill="#5f6368" class="a-s-fa-Ha-pa"><g><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg>
+                        </div>
+                        <h1>Windows</h1>
+                        <div class="MenuButtonContainer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" x="0px" y="0px" width="20" viewBox="0 0 32 32"> <path d="M13 16c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 14.346 13 16zM13 26c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 24.346 13 26zM13 6c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 4.346 13 6z"></path> </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="TypeContainer">
+                <div class="TypeHeaderContainer">
+                    Files
+                </div>
+                <div class="TypeContentContainer">
+                    <div class="FileContainer">
+                        <div class="FileHeader">
+                            <div class="FileTypeContainer">
+                                <img style="width: 15px;" src="https://i.imgur.com/7Ymm3kS.png" alt="Video">
+                            </div>
+                            <div class="FileTitle">
+                                Word Document
+                            </div>
+                        </div>
+                        <div class="FileImageContainer">
+                            <img alt="" src="https://i.imgur.com/1L1I1mZ.png">
+                        </div>
+                        <div class="MenuButtonContainer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" x="0px" y="0px" width="20" viewBox="0 0 32 32"> <path d="M13 16c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 14.346 13 16zM13 26c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 24.346 13 26zM13 6c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 4.346 13 6z"></path> </svg>
+                        </div>
+                    </div>
+                    <div class="FileContainer">
+                        <div class="FileHeader">
+                            <div class="FileTypeContainer">
+                                <img style="width: 15px;" src="https://i.imgur.com/989iIw6.png" alt="Video">
+                            </div>
+                            <div class="FileTitle">
+                                Excel Document
+                            </div>
+                        </div>
+                        <div class="FileImageContainer">
+                            <img alt="" src="https://i.imgur.com/1L1I1mZ.png">
+                        </div>
+                        <div class="MenuButtonContainer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" x="0px" y="0px" width="20" viewBox="0 0 32 32"> <path d="M13 16c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 14.346 13 16zM13 26c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 24.346 13 26zM13 6c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 4.346 13 6z"></path> </svg>
+                        </div>
+                    </div>
+                    <div class="FileContainer">
+                        <div class="FileHeader">
+                            <div class="FileTypeContainer">
+                                <img style="width: 15px;" src="https://i.imgur.com/RrsIIRA.png" alt="Video">
+                            </div>
+                            <div class="FileTitle">
+                                Backup
+                            </div>
+                        </div>
+                        <div class="FileImageContainer">
+                            <img alt="" src="https://i.imgur.com/pyrdCic.png">
+                        </div>
+                        <div class="MenuButtonContainer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" x="0px" y="0px" width="20" viewBox="0 0 32 32"> <path d="M13 16c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 14.346 13 16zM13 26c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 24.346 13 26zM13 6c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 4.346 13 6z"></path> </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ListLayoutContainer" id="ListLayoutContainer">
+            <table class="ListLayoutTable">
+                <thead>
+                    <tr>
+                        <th width="60%">Name</th>
+                        <th width="18%">Modified On</th>
+                        <th width="18%">File Size</th>
+                        <th width="4%"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="listItemTitleContainer">
+                                <div class="SvgContainer">
+                                    <svg style="max-width: 20px" width="100%" focusable="false" viewBox="0 0 24 24" fill="#5f6368" class="a-s-fa-Ha-pa"><g><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg>
+                                </div>
+                                <div class="ListItemTitle">
+                                    Program Files (x86)
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            Feb 23, 2023
+                        </td>
+                        <td>
+                            -
+                        </td>
+                        <td>
+                            <div class="ListMenuButtonContainer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" x="0px" y="0px" width="20" viewBox="0 0 32 32"> <path d="M13 16c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 14.346 13 16zM13 26c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 24.346 13 26zM13 6c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 4.346 13 6z"></path> </svg>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="listItemTitleContainer">
+                                <div class="SvgContainer">
+                                    <svg style="max-width: 20px" width="100%" focusable="false" viewBox="0 0 24 24" fill="#5f6368" class="a-s-fa-Ha-pa"><g><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg>
+                                </div>
+                                <div class="ListItemTitle">
+                                    Users
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            Feb 23, 2023
+                        </td>
+                        <td>
+                            -
+                        </td>
+                        <td>
+                            <div class="ListMenuButtonContainer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" x="0px" y="0px" width="20" viewBox="0 0 32 32"> <path d="M13 16c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 14.346 13 16zM13 26c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 24.346 13 26zM13 6c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 4.346 13 6z"></path> </svg>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="listItemTitleContainer">
+                                <div class="SvgContainer">
+                                    <svg style="max-width: 20px" width="100%" focusable="false" viewBox="0 0 24 24" fill="#5f6368" class="a-s-fa-Ha-pa"><g><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg>
+                                </div>
+                                <div class="ListItemTitle">
+                                    Windows
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            Feb 23, 2023
+                        </td>
+                        <td>
+                            -
+                        </td>
+                        <td>
+                            <div class="ListMenuButtonContainer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" x="0px" y="0px" width="20" viewBox="0 0 32 32"> <path d="M13 16c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 14.346 13 16zM13 26c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 24.346 13 26zM13 6c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 4.346 13 6z"></path> </svg>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="listItemTitleContainer">
+                                <img style="width: 15px;" src="https://i.imgur.com/7Ymm3kS.png" alt="Video">
+                                <div class="ListItemTitle">
+                                    Word Document
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            Feb 23, 2023
+                        </td>
+                        <td>
+                            -
+                        </td>
+                        <td>
+                            <div class="ListMenuButtonContainer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" x="0px" y="0px" width="20" viewBox="0 0 32 32"> <path d="M13 16c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 14.346 13 16zM13 26c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 24.346 13 26zM13 6c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 4.346 13 6z"></path> </svg>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="listItemTitleContainer">
+                                <img style="width: 15px;" src="https://i.imgur.com/989iIw6.png" alt="Video">
+                                <div class="ListItemTitle">
+                                    Excel Document
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            Feb 23, 2023
+                        </td>
+                        <td>
+                            -
+                        </td>
+                        <td>
+                            <div class="ListMenuButtonContainer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" x="0px" y="0px" width="20" viewBox="0 0 32 32"> <path d="M13 16c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 14.346 13 16zM13 26c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 24.346 13 26zM13 6c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 4.346 13 6z"></path> </svg>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="listItemTitleContainer">
+                                <img style="width: 15px;" src="https://i.imgur.com/RrsIIRA.png" alt="Video">
+                                <div class="ListItemTitle">
+                                    Backup
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            Feb 23, 2023
+                        </td>
+                        <td>
+                            -
+                        </td>
+                        <td>
+                            <div class="ListMenuButtonContainer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" x="0px" y="0px" width="20" viewBox="0 0 32 32"> <path d="M13 16c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 14.346 13 16zM13 26c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 24.346 13 26zM13 6c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3S13 4.346 13 6z"></path> </svg>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+
+</html>
