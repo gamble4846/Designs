@@ -1,0 +1,57 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.BodyContainer {
+    max-width: 1000px;
+    padding: 20px;
+    margin: auto;
+}
+
+.ImageZoom {
+    width: 100%;
+    height: auto;
+    cursor: zoom-in;
+    position: relative;
+}
+
+.ImageZoom img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.ImageZoom.Open img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+
+.ImageZoom.Open {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    z-index: 5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+
+.ImageZoom.Open::after {
+    content: "X";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
